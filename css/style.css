@@ -78,53 +78,100 @@ nav ul li a.active {
 .container {
     position: fixed;
     width: auto;
-    margin-top: 250px;
+    margin-top: 200px;
     margin-left: 150px;
     color: white;
-    display: flex;
+    display: inline-block;
     align-items: center;
 }
 
-.container h1 {
+.type {
     font-size: 40px;
-    font-weight: 600;
+    overflow: hidden;
+    border-right: .125em solid orange;
+    white-space: nowrap;
+    animation: typing 2s steps(24, end) forwards, blinking .75s infinite;
+    width: 0;
 }
 
-.container h1::before,
-.container h1::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
 }
 
-.container h1::before {
-    background-color: var(--bg-color);
-    animation: 
-        typewriter var(--typewriterSpeed) steps(27) 500ms forwards;
-        
+@keyframes blinking {
+    from { border-color: transparent }
+    to { border-color: skyblue; }
 }
 
-.container h1::after {
-    width: .125em;
-    background: orange;
-    animation: 
-        typewriter var(--typewriterSpeed) steps(27) 500ms forwards,
-        blink 750ms steps(27) infinite;
+.brief-info {
+    position: fixed;
+    margin-top: 275px;
+    margin-left: 150px;
+    margin-right: 750px;
 }
 
-@keyframes typewriter {
-    to {
-        left: 100%;
-    }
+.brief-info p {
+    color: white;
+    font-size: 20px;
+    line-height: 35px;
+    animation: fadeIn 3s;
 }
 
-@keyframes blink {
-    to {
-        background: transparent;
-    }
+.circle {
+    position: fixed;
+    margin-top: 100px;
+    margin-left: 425px;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    background-color: rgb(31, 29, 70);    
+}
+
+.background {
+    position: fixed;
+    margin-top: 260px;
+    margin-left: 125px;
+    width: 560px;
+    height: 425px;
+    background-color: skyblue;
+}
+
+.box {
+    position: fixed;
+    margin-top: 275px;
+    margin-left: 140px;
+    width: 560px;
+    height: 425px;
+    background-color: rgb(14, 38, 46);
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.project-info {
+    position: fixed;
+    margin-top: 150px;
+    margin-left: 150px;
+}
+
+.project-info h2 {
+    color: white;
+    font-size: 35px;
+}
+
+.project-list {
+    margin-top: 25px;
+    color: white;
+    list-style: none;
+}
+
+.status {
+    margin-top: 25px;
+    color: white;
+    font-size: 20px;
 }
 
 .link {
