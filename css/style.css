@@ -14,6 +14,7 @@
 
 body {
     background-color: var(--bg-color);
+    margin-bottom: 50px;
 }
 
 /*
@@ -159,7 +160,7 @@ nav ul li a.active {
     100% { opacity: 1; }
 }
 
-.shaz {
+.shaz-index {
     position: absolute;
     margin-top: -75px;
     margin-left: 850px;
@@ -171,6 +172,33 @@ nav ul li a.active {
 .break {
     margin: 550px 250px 0 250px;
     opacity: 50%;
+}
+
+/*
+    style for about.html
+*/
+
+.about {
+    position: absolute;
+    margin: 75px 600px 150px 150px;
+    color: white;
+    line-height: 25px;
+}
+
+.about h2 {
+    font-size: 35px;
+}
+
+.about p {
+    margin-top: 25px;
+}
+
+.shaz-about {
+    position: absolute;
+    margin-top: 140px;
+    margin-left: 900px;
+    height: 65%;
+    box-shadow: 15px 15px skyblue;
 }
 
 /*
@@ -301,4 +329,12 @@ nav ul li a.active {
 
 .wrapper .button:nth-child(3) span {
     color: #E1306C;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: red;
 }
